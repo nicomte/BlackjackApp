@@ -4,21 +4,17 @@
 //
 //  Created by HSLU-N0004891 on 13.11.2024.
 //
-
+ 
 import SwiftUI
-
+ 
 struct ContentView: View {
+    @StateObject private var gameSettings = GameSettings()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+     TableSelectionView()
+            .environmentObject(gameSettings)
     }
 }
-
+ 
 #Preview {
     ContentView()
 }
